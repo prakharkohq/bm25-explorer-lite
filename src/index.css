@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-gray-950 text-gray-100;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-4;
+  }
+
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-800 hover:bg-gray-700 text-gray-200 px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+
+  .input {
+    @apply bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent w-full;
+  }
+
+  .label {
+    @apply text-xs font-medium text-gray-400 uppercase tracking-wider;
+  }
+
+  .tab-active {
+    @apply bg-indigo-900/50 text-indigo-300 border-b-2 border-indigo-500;
+  }
+
+  .tab-inactive {
+    @apply text-gray-400 hover:text-gray-200 hover:bg-gray-800/50;
+  }
+
+  .score-badge {
+    @apply text-xs font-mono bg-indigo-950 text-indigo-300 px-2 py-0.5 rounded;
+  }
+
+  .tag {
+    @apply text-xs bg-gray-800 text-gray-400 px-2 py-0.5 rounded-full;
+  }
+}
+
+.json-viewer {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.explain-tree {
+  font-size: 12px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
